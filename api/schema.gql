@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Mutation {
+  removeUser(id: String!): User!
+  signInLocal: User!
+  signOut: User!
+  signUp: User!
+  updateUser: User!
+}
+
+type Query {
+  user: User!
+}
+
+"""The `UUID` scalar type represents a v4 UUID."""
+scalar UUID
+
+type User {
+  """The user's email."""
+  email: String!
+
+  """The user's first name."""
+  firstName: String!
+
+  """The user's ID."""
+  id: UUID!
+
+  """The user's last name."""
+  lastName: String!
+}

@@ -11,6 +11,7 @@
   "license": "UNLICENSED",
   "private": true,
   "workspaces": [
+    "api",
     "app"
   ],
   "scripts": {
