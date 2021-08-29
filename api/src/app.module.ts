@@ -1,14 +1,8 @@
-import {KnexModule} from "@brandonnpm2/nestjs-knex"
-import {RedisModule} from "@brandonnpm2/nestjs-redis"
 import {Module} from "@nestjs/common"
-import {ConfigModule, ConfigService} from "@nestjs/config"
+import {ConfigModule} from "@nestjs/config"
 import {GraphQLModule} from "@nestjs/graphql"
-import {RedisOptions} from "ioredis"
-import {Knex} from "knex"
 import path from "path"
 
-import {AuthModule} from "#/auth/auth.module"
-import {UserModule} from "#/user/user.module"
 import {UuidScalar} from "./uuid.scalar"
 
 @Module({
@@ -26,34 +20,6 @@ import {UuidScalar} from "./uuid.scalar"
         credentials: true,
       },
     }),
-    KnexModule.registerAsync({
-      useFactory: (configService: ConfigService) => {
-        const knexConfig: Knex.Config = {
-          client: `pg`,
-          connection: {
-            host: configService.get<string>(`POSTGRES_HOSTNAME`),
-            port: configService.get<number>(`POSTGRES_PORT`),
-            user: configService.get<string>(`POSTGRES_USER`),
-            password: configService.get<string>(`POSTGRES_PASSWORD`),
-            database: configService.get<string>(`POSTGRES_DB_NAME`),
-          },
-        }
-        return knexConfig
-      },
-      inject: [ConfigService],
-    }),
-    RedisModule.registerAsync({
-      useFactory: (configService: ConfigService) => {
-        const redisOptions: RedisOptions = {
-          host: configService.get<string>(`REDIS_HOSTNAME`),
-          port: configService.get<number>(`REDIS_PORT`),
-        }
-        return redisOptions
-      },
-      inject: [ConfigService],
-    }),
-    UserModule,
-    AuthModule,
   ],
   providers: [UuidScalar],
 })
