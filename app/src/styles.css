@@ -18,6 +18,10 @@ h2 {
   @apply font-header text-3xl font-semibold;
 }
 
+input[type="text"] {
+  @apply border-2 border-black px-4 py-2;
+}
+
 @layer utilities {
   .section {
     @apply grid gap-y-4;
