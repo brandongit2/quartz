@@ -7,6 +7,7 @@ import type {Descendant} from "slate"
 import type {CustomElement} from "src/types"
 
 import MainLayout from "#components/layouts/MainLayout"
+import Navbar from "#components/Navbar/Navbar"
 
 const Doc: NextPage = () => {
   const editor = useMemo(() => withReact(createEditor()), [])

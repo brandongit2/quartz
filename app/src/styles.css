@@ -22,4 +22,12 @@ h2 {
   .section {
     @apply grid gap-y-4;
   }
+
+  .button {
+    @apply px-4 py-2 bg-black text-sepia rounded;
+  }
+
+  .center {
+    @apply top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+  }
 }

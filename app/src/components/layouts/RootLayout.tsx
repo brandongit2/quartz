@@ -16,6 +16,7 @@ const RootLayout: FC<RootLayoutProps> = ({children, title, ...props}) => {
       <div className="h-screen grid place-items-stretch">
         <div {...props}>{children}</div>
       </div>
+      <div id="modals" />
     </>
   )
 }
