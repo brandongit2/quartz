@@ -36,9 +36,9 @@ const Modal: FC<ModalProps> = ({children, visible, onClose}) => {
             className="card px-6 py-4 fixed center grid gap-x-6 gap-y-4 bg-sepia rounded"
             style={{
               gridTemplate: `
-            "header close" auto
-            "body   body " 1fr / 1fr auto
-          `,
+                "header close" auto
+                "body   body " 1fr / 1fr auto
+              `,
             }}
           >
             <button className="plain">
