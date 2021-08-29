@@ -15,6 +15,12 @@ export type ModalProps = {
 const Modal: FC<ModalProps> = ({children, visible, onClose}) => {
   const {theme} = getTailwindConfig()
 
+  try {
+    document
+  } catch {
+    return null
+  }
+
   return ReactDOM.createPortal(
     <AnimatePresence>
       {visible ? (
