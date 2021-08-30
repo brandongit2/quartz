@@ -33,7 +33,7 @@ const Modal: FC<ModalProps> = ({children, visible, onClose}) => {
         >
           <div className="fixed w-full h-full top-0 left-0 bg-black bg-opacity-40" onClick={onClose} />
           <div
-            className="card px-6 py-4 fixed center grid gap-x-6 gap-y-4 bg-sepia rounded"
+            className="card px-6 py-4 fixed center grid gap-x-6 gap-y-4 bg-sepia rounded min-w-max"
             style={{
               gridTemplate: `
                 "header close" auto

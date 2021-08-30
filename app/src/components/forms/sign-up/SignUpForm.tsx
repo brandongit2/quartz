@@ -26,7 +26,7 @@ const SignUpForm: FC = () => {
 		<form 
 			noValidate
 			onSubmit={handleSubmit(onSubmit)} 
-			className="grid gap-x-4 gap-y-3 sm:block"
+			className="md:grid block"
 			style={{gridTemplate: `
 				"firstName lastName"
 				"email email"
@@ -34,37 +34,37 @@ const SignUpForm: FC = () => {
 				"button button"
 			`}}
 		>
-			<fieldset style={{gridArea: `firstName`}}>
+			<fieldset style={{gridArea: `firstName`}} className="m-2">
 				<label htmlFor="first-name">First name</label>
 				<input className={`block ${errors.firstName && `border-danger`}`} {...register(`firstName`)} id="first-name" type="text" />
 				<p className="text-danger text-sm">{errors.firstName?.message}</p>
 			</fieldset>
 
-			<fieldset style={{gridArea: `lastName`}}>
+			<fieldset style={{gridArea: `lastName`}} className="m-2">
 				<label  htmlFor="last-name">Last name</label>
 				<input className={`block ${errors.lastName && `border-danger`}`} {...register(`lastName`)} id="last-name" type="text" />
 				<p className="text-danger text-sm">{errors.lastName?.message}</p>
 			</fieldset>
 
-			<fieldset style={{gridArea: `email`}}>
+			<fieldset style={{gridArea: `email`}} className="m-2">
 				<label htmlFor="email">Email</label>
-				<input className={`w-full block ${errors.email && `border-danger`}`} {...register(`email`)} id="email" type="email" />
+				<input className={`md:w-full block ${errors.email && `border-danger`}`} {...register(`email`)} id="email" type="email" />
 				<p className="text-danger text-sm">{errors.email?.message}</p>
 			</fieldset>
 
-			<fieldset style={{gridArea: `password`}}>
+			<fieldset style={{gridArea: `password`}} className="m-2">
 				<label htmlFor="password">Password</label>
 				<input className={`block ${errors.password && `border-danger`}`} {...register(`password`)} id="password" type="text" />
 				<p className="text-danger text-sm">{errors.password?.message}</p>
 			</fieldset>
 
-			<fieldset style={{gridArea: `confirmPassword`}}>
+			<fieldset style={{gridArea: `confirmPassword`}} className="m-2">
 				<label htmlFor="confirm-password">Confirm password</label>
 				<input className={`block ${errors.confirmPassword && `border-danger`}`} {...register(`confirmPassword`)} id="confirm-password" type="text" />
 				<p className="text-danger text-sm">{errors.confirmPassword?.message}</p>
 			</fieldset>
 
-			<input style={{gridArea: `button`}} className="button mt-2" type="submit" />
+			<input style={{gridArea: `button`}} className="button m-2" type="submit" />
 		</form>
 	)
 }
