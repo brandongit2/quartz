@@ -26,7 +26,7 @@ const SignUpForm: FC = () => {
 		<form 
 			noValidate
 			onSubmit={handleSubmit(onSubmit)} 
-			className="md:grid block"
+			className="sm:grid block"
 			style={{gridTemplate: `
 				"firstName lastName"
 				"email email"
@@ -48,7 +48,7 @@ const SignUpForm: FC = () => {
 
 			<fieldset style={{gridArea: `email`}} className="m-2">
 				<label htmlFor="email">Email</label>
-				<input className={`md:w-full block ${errors.email && `border-danger`}`} {...register(`email`)} id="email" type="email" />
+				<input className={`sm:w-full block ${errors.email && `border-danger`}`} {...register(`email`)} id="email" type="email" />
 				<p className="text-danger text-sm">{errors.email?.message}</p>
 			</fieldset>
 
