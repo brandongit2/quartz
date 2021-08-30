@@ -1782,7 +1782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/resolvers@npm:2.8.0, @hookform/resolvers@npm:^2.8.0":
+"@hookform/resolvers@npm:2.8.0":
   version: 2.8.0
   resolution: "@hookform/resolvers@npm:2.8.0"
   peerDependencies:
@@ -10142,12 +10142,13 @@ __metadata:
     eslint-config-next: 11.1.0
     eslint-plugin-react: 7.25.0
     eslint-plugin-react-hooks: 4.2.0
+    framer-motion: 4.1.17
     next: 11.1.0
     postcss: 8.3.6
     prettier: 2.3.2
     react: 17.0.2
     react-dom: 17.0.2
-    react-hook-form: 7.14.0
+    react-hook-form: 7.14.1
     slate: 0.65.3
     slate-react: 0.65.3
     tailwindcss: 2.2.8
@@ -10161,18 +10162,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "notary@workspace:."
   dependencies:
-    "@hookform/resolvers": ^2.8.0
     "@nestjs/schematics": 8.0.3
-    "@types/zxcvbn": 4.4.1
     "@typescript-eslint/eslint-plugin": 4.29.3
     "@typescript-eslint/parser": 4.29.3
     eslint: 7.32.0
-    framer-motion: 4.1.17
     lerna: 4.0.0
     prettier: 2.3.2
-    react-hook-form: 7.14.0
-    yup: ^0.32.9
-    zxcvbn: 4.4.2
   languageName: unknown
   linkType: soft
 
@@ -11512,12 +11507,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:7.14.0":
-  version: 7.14.0
-  resolution: "react-hook-form@npm:7.14.0"
+"react-hook-form@npm:7.14.1":
+  version: 7.14.1
+  resolution: "react-hook-form@npm:7.14.1"
   peerDependencies:
     react: ^16.8.0 || ^17
-  checksum: 55bf74f858bb71cdee9fca2c3479053ce7f0df617973344c0b6faec110b73ced18e42023264f88ca552fdf4d87dcdacb3464e20b4e66b927a6abaee511b6685a
+  checksum: b40cdccb069a81ea8aa63727a9a71f70bc161c1767756e495c42295b54222c463e87cb5521dcc390f20f6e749b17224f81574e9551eb375edd4c5bee2b3501e2
   languageName: node
   linkType: hard
 
@@ -14416,7 +14411,7 @@ typescript@4.4.2:
   languageName: node
   linkType: hard
 
-"yup@npm:0.32.9, yup@npm:^0.32.9":
+"yup@npm:0.32.9":
   version: 0.32.9
   resolution: "yup@npm:0.32.9"
   dependencies:
