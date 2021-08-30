@@ -8,6 +8,7 @@ module.exports = {
       white: `#FFFFFF`,
       sepia: `#FDDF91`,
       cream: `#FFF9E9`,
+      danger: `#e3342f`,
     },
     fontFamily: {
       header: [`Lora`, `sans-serif`],

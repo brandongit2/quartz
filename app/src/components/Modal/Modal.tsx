@@ -37,7 +37,7 @@ const Modal: FC<ModalProps> = ({children, visible, onClose}) => {
             style={{
               gridTemplate: `
                 "header close" auto
-                "body   body " 1fr / 1fr auto
+                "body body " 1fr / 1fr auto
               `,
             }}
           >
