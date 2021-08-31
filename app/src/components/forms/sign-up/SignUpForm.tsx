@@ -34,11 +34,11 @@ const SignUpForm: FC = () => {
       className="sm:grid block"
       style={{
         gridTemplate: `
-				"firstName lastName"
-				"email email"
-				"password password"
-				"button button"
-			`,
+          "firstName lastName"
+          "email email"
+          "password password"
+          "button button"
+        `,
       }}
     >
       <fieldset style={{gridArea: `firstName`}} className="m-2">
