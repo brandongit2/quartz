@@ -2,6 +2,7 @@ module.exports = {
   purge: [`./src/**/*.{js,ts,jsx,tsx}`],
   mode: `jit`,
   darkMode: false,
+  important: true,
   theme: {
     colors: {
       black: `#363636`,

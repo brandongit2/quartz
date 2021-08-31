@@ -20,7 +20,7 @@ h2 {
 
 input[type="text"],
 input[type="email"] {
-  @apply border-2 border-black px-4 py-2;
+  @apply border-2 border-black px-4 py-2 outline-none;
 }
 
 @layer utilities {

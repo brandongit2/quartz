@@ -1,4 +1,5 @@
 import {yupResolver} from "@hookform/resolvers/yup"
+import clsx from "clsx"
 import {useForm} from "react-hook-form"
 
 import type {FC} from "react"
@@ -43,7 +44,7 @@ const SignUpForm: FC = () => {
       <fieldset style={{gridArea: `firstName`}} className="m-2">
         <label htmlFor="first-name">First name</label>
         <input
-          className={`block ${errors.firstName && `border-danger`}`}
+          className={clsx(`block`, errors.firstName && `border-danger`)}
           {...register(`firstName`)}
           id="first-name"
           type="text"
@@ -54,7 +55,7 @@ const SignUpForm: FC = () => {
       <fieldset style={{gridArea: `lastName`}} className="m-2">
         <label htmlFor="last-name">Last name</label>
         <input
-          className={`block ${errors.lastName && `border-danger`}`}
+          className={clsx(`block`, errors.lastName && `border-danger`)}
           {...register(`lastName`)}
           id="last-name"
           type="text"
@@ -65,7 +66,7 @@ const SignUpForm: FC = () => {
       <fieldset style={{gridArea: `email`}} className="m-2">
         <label htmlFor="email">Email</label>
         <input
-          className={`sm:w-full block ${errors.email && `border-danger`}`}
+          className={clsx(`sm:w-full block`, errors.email && `border-danger`)}
           {...register(`email`)}
           id="email"
           type="email"
@@ -76,7 +77,7 @@ const SignUpForm: FC = () => {
       <fieldset style={{gridArea: `password`}} className="m-2">
         <label htmlFor="password">Password</label>
         <input
-          className={`sm:w-full block ${errors.password && `border-danger`}`}
+          className={clsx(`sm:w-full block`, errors.password && `border-danger`)}
           {...register(`password`)}
           id="password"
           type="text"
