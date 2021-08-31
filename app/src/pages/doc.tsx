@@ -5,7 +5,6 @@ import {Editable, Slate, withReact} from "slate-react"
 import type {NextPage} from "next"
 import type {Descendant} from "slate"
 
-
 import MainLayout from "#components/layouts/MainLayout"
 import Navbar from "#components/Navbar/Navbar"
 import type {CustomElement} from "src/types"

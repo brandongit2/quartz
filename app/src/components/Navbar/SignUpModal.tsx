@@ -1,10 +1,9 @@
 import {Dispatch, SetStateAction} from "react"
 
-import type { FC} from "react";
+import type {FC} from "react"
 
 import SignUpForm from "#components/forms/sign-up/SignUpForm"
 import Modal from "#components/Modal"
-
 
 export type SignUpModalProps = {
   visible: boolean

@@ -1,6 +1,6 @@
 import {Dispatch, SetStateAction} from "react"
 
-import type { FC} from "react";
+import type {FC} from "react"
 
 import Modal from "#components/Modal"
 
