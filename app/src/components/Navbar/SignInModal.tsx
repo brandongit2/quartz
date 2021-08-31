@@ -1,5 +1,8 @@
+import {Dispatch, SetStateAction} from "react"
+
+import type { FC} from "react";
+
 import Modal from "#components/Modal"
-import {Dispatch, FC, SetStateAction} from "react"
 
 export type SignInModalProps = {
   visible: boolean

@@ -1,11 +1,11 @@
 import clsx from "clsx"
+import React, {useState} from "react"
 
 import type {FC} from "react"
 
-import NotaryLogo from "#public/notary-logo.svg"
-import React, {useState} from "react"
-import SignUpModal from "#components/Navbar/SignUpModal"
 import SignInModal from "#components/Navbar/SignInModal"
+import SignUpModal from "#components/Navbar/SignUpModal"
+import NotaryLogo from "#public/notary-logo.svg"
 
 export type NavbarProps = {
   noLogo?: boolean
