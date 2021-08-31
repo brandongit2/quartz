@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import {Dispatch, SetStateAction} from "react"
 
 import type {FC} from "react"
 
 import SignUpForm from "#components/forms/sign-up/SignUpForm"
+=======
+import type {FC} from "react"
+
+>>>>>>> main
 import Modal from "#components/Modal"
 
 export type SignUpModalProps = {

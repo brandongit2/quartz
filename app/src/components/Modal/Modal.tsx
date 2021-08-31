@@ -1,5 +1,5 @@
 import {AnimatePresence, motion} from "framer-motion"
-import React, {Dispatch, SetStateAction} from "react"
+import React from "react"
 import ReactDOM from "react-dom"
 
 import type {FC} from "react"
