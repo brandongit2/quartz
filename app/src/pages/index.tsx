@@ -4,8 +4,8 @@ import type {NextPage} from "next"
 
 import RootLayout from "#components/layouts/RootLayout"
 import Link from "#components/Link"
-import NotaryLogo from "#public/notary-logo.svg"
 import Navbar from "#components/Navbar/Navbar"
+import NotaryLogo from "#public/notary-logo.svg"
 
 const Index: NextPage = () => {
   return (
