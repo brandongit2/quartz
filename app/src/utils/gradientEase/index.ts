@@ -16,6 +16,7 @@ export function gradientEase(easingFunction: EasingFunctions, colors: string[], 
     throw new Error(`\`colors.length\` and \`positions.length\` don't match.`)
 
   if (!positions)
+    // Evenly populate the positions array from 0 to 1
     positions = Array(colors.length)
       .fill(null)
       .map((_, i) => i / colors.length)
@@ -23,11 +24,13 @@ export function gradientEase(easingFunction: EasingFunctions, colors: string[], 
   let gradientString = `linear-gradient(`
   if (angle) gradientString += `${angle},`
 
-  let acc = positions[0]
+  let curPos = positions[0]
   for (let i = 0; i < colors.length - 1; i++) {
+    // Let chroma.js generate a gradient between colors[i] and colors[i + 1]
     const scale = chroma.scale([colors[i], colors[i + 1]])
     const range = positions[i + 1] - positions[i]
 
+    // Easing function stuff. Default is `linear` but it can be specified through the `easingFunction` parameter
     let func
     if (easingFunction === `linear`) {
       func = `linear`
@@ -37,12 +40,17 @@ export function gradientEase(easingFunction: EasingFunctions, colors: string[], 
       if (!/Out/.test(easingFunction) && i === colors.length - 2) func = func.replace(`Out`, ``)
     }
 
+    // Sample the gradient 10 times between `curPos` and `curPos + range`, and add it to the final string
     for (let j = 0; j <= 10; j++) {
-      gradientString += `${scale(ease(func as EasingFunctions, j / 10))} ${(acc + (j / 10) * range) * 100}%,`
+      const color = scale(ease(func as EasingFunctions, j / 10)).hex()
+      const pos = (curPos + (j / 10) * range) * 100
+      gradientString += `${color} ${pos}%,`
     }
 
-    acc += range
+    curPos += range
   }
+
+  // Remove trailing comma and add closing parenthesis
   gradientString = gradientString.slice(0, -1)
   gradientString += `)`
 

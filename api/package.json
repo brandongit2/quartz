@@ -1,8 +1,8 @@
 {
-  "name": "notary-api",
-  "homepage": "https://notary.slate.cx",
-  "bugs": "https://github.com/brandongit2/notary/issues",
-  "repository": "git@github.com:brandongit2/notary.git",
+  "name": "quartz-api",
+  "homepage": "https://quartz.cx",
+  "bugs": "https://github.com/brandongit2/quartz/issues",
+  "repository": "git@github.com:brandongit2/quartz.git",
   "author": {
     "name": "Brandon Tsang",
     "email": "brandononline2@gmail.com",
@@ -15,10 +15,10 @@
     "start:prod": "node dist/main",
     "build": "nest build",
     "dbsetup": "cd knex && knex migrate:latest && knex seed:run",
-    "psql": "docker exec -it notary-db psql -U postgres -d notary",
+    "psql": "docker exec -it quartz-db psql -U postgres -d quartz",
     "knex": "cd knex && knex --",
     "nest": "nest --",
-    "redis": "docker exec -it notary-sessions redis-cli",
+    "redis": "docker exec -it quartz-sessions redis-cli",
     "lint": "prettier --write . --loglevel warn && eslint --fix . && tsc"
   },
   "dependencies": {

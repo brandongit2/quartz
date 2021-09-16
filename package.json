@@ -1,8 +1,8 @@
 {
-  "name": "notary",
-  "homepage": "https://notary.slate.cx",
-  "bugs": "https://github.com/brandongit2/notary/issues",
-  "repository": "git@github.com:brandongit2/notary.git",
+  "name": "quartz",
+  "homepage": "https://quartz.cx",
+  "bugs": "https://github.com/brandongit2/quartz/issues",
+  "repository": "git@github.com:brandongit2/quartz.git",
   "author": {
     "name": "Brandon Tsang",
     "email": "brandononline2@gmail.com",

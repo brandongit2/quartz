@@ -10078,99 +10078,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"notary-api@workspace:api":
-  version: 0.0.0-use.local
-  resolution: "notary-api@workspace:api"
-  dependencies:
-    "@brandonnpm2/nestjs-knex": 2.1.0
-    "@brandonnpm2/nestjs-redis": 1.1.0
-    "@nestjs/cli": 8.1.1
-    "@nestjs/common": 8.0.6
-    "@nestjs/config": 1.0.1
-    "@nestjs/core": 8.0.6
-    "@nestjs/graphql": 9.0.2
-    "@nestjs/platform-fastify": 8.0.6
-    "@types/bcrypt": 5.0.0
-    "@types/faker": 5.5.8
-    "@types/ioredis": 4.27.1
-    "@types/memoizee": 0.4.6
-    "@types/node": 16.7.6
-    "@types/uuid": 8.3.1
-    apollo-server-core: 3.3.0
-    apollo-server-fastify: 3.3.0
-    bcrypt: 5.0.1
-    class-transformer: 0.4.0
-    class-validator: 0.13.1
-    dayjs: 1.10.6
-    dotenv: 10.0.0
-    eslint: 7.32.0
-    faker: 5.5.3
-    fastify-cookie: 5.3.1
-    fastify-helmet: 5.3.2
-    graphql: 15.5.1
-    graphql-tools: 8.1.0
-    ioredis: 4.27.8
-    knex: 0.95.10
-    pg: 8.7.1
-    prettier: 2.3.2
-    reflect-metadata: 0.1.13
-    rxjs: 7.3.0
-    ts-node-dev: 1.1.8
-    typescript: 4.4.2
-    uuid: 8.3.2
-  languageName: unknown
-  linkType: soft
-
-"notary-app@workspace:app":
-  version: 0.0.0-use.local
-  resolution: "notary-app@workspace:app"
-  dependencies:
-    "@emotion/babel-plugin": 11.3.0
-    "@emotion/react": 11.4.1
-    "@hookform/resolvers": 2.8.0
-    "@svgr/webpack": 5.5.0
-    "@types/chroma-js": 2.1.3
-    "@types/node": 16.7.6
-    "@types/react": 17.0.19
-    "@types/react-dom": 17.0.9
-    "@types/tailwindcss": 2.2.1
-    "@types/zxcvbn": 4.4.1
-    autoprefixer: 10.3.3
-    chroma-js: 2.1.2
-    clsx: 1.1.1
-    eslint: 7.32.0
-    eslint-config-next: 11.1.0
-    eslint-plugin-react: 7.25.0
-    eslint-plugin-react-hooks: 4.2.0
-    framer-motion: 4.1.17
-    next: 11.1.0
-    postcss: 8.3.6
-    prettier: 2.3.2
-    react: 17.0.2
-    react-dom: 17.0.2
-    react-hook-form: 7.14.1
-    slate: 0.65.3
-    slate-react: 0.65.3
-    tailwindcss: 2.2.8
-    typescript: 4.4.2
-    yup: 0.32.9
-    zxcvbn: 4.4.2
-  languageName: unknown
-  linkType: soft
-
-"notary@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "notary@workspace:."
-  dependencies:
-    "@nestjs/schematics": 8.0.3
-    "@typescript-eslint/eslint-plugin": 4.29.3
-    "@typescript-eslint/parser": 4.29.3
-    eslint: 7.32.0
-    lerna: 4.0.0
-    prettier: 2.3.2
-  languageName: unknown
-  linkType: soft
-
 "npm-bundled@npm:^1.1.1":
   version: 1.1.2
   resolution: "npm-bundled@npm:1.1.2"
@@ -11392,6 +11299,99 @@ __metadata:
   checksum: 24af7b9928ba2141233fba2912876ff100403dba1b08b20c3b490da9ea6c636760445ea2211a079e7dfa882a5cf8f738337b3748c8bdd0f93358fa8881d2db8f
   languageName: node
   linkType: hard
+
+"quartz-api@workspace:api":
+  version: 0.0.0-use.local
+  resolution: "quartz-api@workspace:api"
+  dependencies:
+    "@brandonnpm2/nestjs-knex": 2.1.0
+    "@brandonnpm2/nestjs-redis": 1.1.0
+    "@nestjs/cli": 8.1.1
+    "@nestjs/common": 8.0.6
+    "@nestjs/config": 1.0.1
+    "@nestjs/core": 8.0.6
+    "@nestjs/graphql": 9.0.2
+    "@nestjs/platform-fastify": 8.0.6
+    "@types/bcrypt": 5.0.0
+    "@types/faker": 5.5.8
+    "@types/ioredis": 4.27.1
+    "@types/memoizee": 0.4.6
+    "@types/node": 16.7.6
+    "@types/uuid": 8.3.1
+    apollo-server-core: 3.3.0
+    apollo-server-fastify: 3.3.0
+    bcrypt: 5.0.1
+    class-transformer: 0.4.0
+    class-validator: 0.13.1
+    dayjs: 1.10.6
+    dotenv: 10.0.0
+    eslint: 7.32.0
+    faker: 5.5.3
+    fastify-cookie: 5.3.1
+    fastify-helmet: 5.3.2
+    graphql: 15.5.1
+    graphql-tools: 8.1.0
+    ioredis: 4.27.8
+    knex: 0.95.10
+    pg: 8.7.1
+    prettier: 2.3.2
+    reflect-metadata: 0.1.13
+    rxjs: 7.3.0
+    ts-node-dev: 1.1.8
+    typescript: 4.4.2
+    uuid: 8.3.2
+  languageName: unknown
+  linkType: soft
+
+"quartz-app@workspace:app":
+  version: 0.0.0-use.local
+  resolution: "quartz-app@workspace:app"
+  dependencies:
+    "@emotion/babel-plugin": 11.3.0
+    "@emotion/react": 11.4.1
+    "@hookform/resolvers": 2.8.0
+    "@svgr/webpack": 5.5.0
+    "@types/chroma-js": 2.1.3
+    "@types/node": 16.7.6
+    "@types/react": 17.0.19
+    "@types/react-dom": 17.0.9
+    "@types/tailwindcss": 2.2.1
+    "@types/zxcvbn": 4.4.1
+    autoprefixer: 10.3.3
+    chroma-js: 2.1.2
+    clsx: 1.1.1
+    eslint: 7.32.0
+    eslint-config-next: 11.1.0
+    eslint-plugin-react: 7.25.0
+    eslint-plugin-react-hooks: 4.2.0
+    framer-motion: 4.1.17
+    next: 11.1.0
+    postcss: 8.3.6
+    prettier: 2.3.2
+    react: 17.0.2
+    react-dom: 17.0.2
+    react-hook-form: 7.14.1
+    slate: 0.65.3
+    slate-react: 0.65.3
+    tailwindcss: 2.2.8
+    typescript: 4.4.2
+    yup: 0.32.9
+    zxcvbn: 4.4.2
+  languageName: unknown
+  linkType: soft
+
+"quartz@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "quartz@workspace:."
+  dependencies:
+    "@nestjs/schematics": 8.0.3
+    "@typescript-eslint/eslint-plugin": 4.29.3
+    "@typescript-eslint/parser": 4.29.3
+    eslint: 7.32.0
+    lerna: 4.0.0
+    prettier: 2.3.2
+  languageName: unknown
+  linkType: soft
 
 "query-string@npm:^6.13.8":
   version: 6.14.1

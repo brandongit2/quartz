@@ -7,15 +7,15 @@ body {
   --full-height: 100vh;
   --full-width: 100vw;
 
-  @apply font-body text-black bg-sepia overflow-hidden;
+  @apply text-white bg-black overflow-hidden;
 }
 
 h1 {
-  @apply font-header text-5xl font-semibold;
+  @apply text-4xl font-light;
 }
 
 h2 {
-  @apply font-header text-3xl font-semibold;
+  @apply text-2xl font-bold;
 }
 
 input[type="text"],
@@ -29,7 +29,7 @@ input[type="email"] {
   }
 
   .button {
-    @apply px-4 py-2 bg-black text-sepia rounded cursor-pointer;
+    @apply px-4 py-2 bg-black text-white rounded cursor-pointer;
   }
 
   .center {

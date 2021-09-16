@@ -21,6 +21,7 @@ import {UuidScalar} from "./uuid.scalar"
     GraphQLModule.forRoot({
       autoSchemaFile: path.resolve(process.cwd(), `schema.gql`),
       sortSchema: true,
+      context: ({request, reply}) => ({request, reply}),
       cors: {
         origin: [`http://localhost:3000`, `https://studio.apollographql.com`],
         credentials: true,

@@ -5,15 +5,11 @@ module.exports = {
   important: true,
   theme: {
     colors: {
-      black: `#363636`,
-      white: `#FFFFFF`,
-      sepia: `#FDDF91`,
-      cream: `#FFF9E9`,
-      danger: `#e3342f`,
+      black: `#333333`,
+      white: `#EEEEEE`,
     },
     fontFamily: {
-      header: [`Lora`, `sans-serif`],
-      body: [`Alegreya`, `sans-serif`],
+      sans: [`Gothic A1`, `sans-serif`],
     },
     extend: {
       height: {

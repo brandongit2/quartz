@@ -5,29 +5,46 @@ import type {NextPage} from "next"
 import RootLayout from "#components/layouts/RootLayout"
 import Link from "#components/Link"
 import Navbar from "#components/Navbar/Navbar"
-import NotaryLogo from "#public/notary-logo.svg"
+import QuartzIcon from "#public/quartz-icon.svg"
+import QuartzLogo from "#public/quartz-logo.svg"
+import {getTailwindConfig} from "#utils/getTailwindConfig"
 
 const Index: NextPage = () => {
   return (
     <RootLayout title="Notary: Light-speed notes.">
       <Navbar noLogo noHeight />
-      <div className="h-full grid place-content-center justify-items-center section">
-        <div className="border-2 border-black">
-          <NotaryLogo className="h-16" />
+      <div className="h-full grid place-items-center section overflow-hidden relative max-w-7xl">
+        <div className="absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          {(() => {
+            try {
+              window
+            } catch {
+              return null
+            }
+
+            const rem = parseFloat(getComputedStyle(document.documentElement).fontSize)
+            const iconHeight = parseInt(getTailwindConfig().theme.spacing![28]) * rem
+            let numIcons = Math.ceil(window.innerHeight / iconHeight)
+
+            // Get it to an even number so that there is an integer center
+            if (numIcons % 2 === 0) numIcons++
+
+            return Array(numIcons)
+              .fill(undefined)
+              .map((_, i) =>
+                i === (numIcons - 1) / 2 ? (
+                  <QuartzLogo key={i} className="h-28" />
+                ) : (
+                  <QuartzIcon key={i} className="h-28" />
+                ),
+              )
+          })()}
         </div>
 
-        <h1>Note-taking at the speed of light.</h1>
-        <h2 className="max-w-2xl text-2xl text-center">
-          <em className="rounded -mx-1 px-1" style={{backgroundColor: `rgba(0, 255, 100, 0.2)`}}>
-            Notary
-          </em>
-          {` `}
-          streamlines the note-taking process, allowing you to make professionally formatted documents without even
-          thinking about it.
-        </h2>
-
-        <div>
-          <Link href="/doc">Create a document</Link>
+        <div className="absolute left-1/2 bottom-1/4 transform -translate-x-1/2">
+          <Link href="/doc">
+            <a className="text-xl border-2 border-white p-3">Create a document →</a>
+          </Link>
         </div>
       </div>
     </RootLayout>
