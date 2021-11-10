@@ -1,10 +1,9 @@
 import {UseGuards} from "@nestjs/common"
 import {Query, Resolver} from "@nestjs/graphql"
 
-import {AuthGuard} from "src/auth/auth.guard"
-
 import {CurrentUser} from "./user.decorator"
 import {User} from "./user.entity"
+import {AuthGuard} from "src/auth/auth.guard"
 
 @Resolver(() => User)
 export class UserResolver {

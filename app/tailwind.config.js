@@ -5,22 +5,15 @@ module.exports = {
   important: true,
   theme: {
     colors: {
-      black: `#333333`,
+      black: `#000000`,
       white: `#EEEEEE`,
     },
     fontFamily: {
       sans: [`Gothic A1`, `sans-serif`],
     },
     extend: {
-      height: {
-        screen: `var(--full-height)`,
-        max: `max-content`,
-      },
       spacing: {
         128: `32rem`,
-      },
-      width: {
-        screen: `var(--full-width)`,
       },
     },
   },

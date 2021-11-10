@@ -1,11 +1,10 @@
 module.exports = {
-  plugins: [`react`, `react-hooks`],
+  plugins: [`react`, `react-hooks`, `@next/next`],
   extends: [
     `../.eslintrc.js`,
     `plugin:react/recommended`,
     `plugin:react-hooks/recommended`,
-    `next`,
-    `next/core-web-vitals`,
+    `plugin:@next/next/core-web-vitals`,
   ],
   env: {
     es6: true,

@@ -17,11 +17,6 @@
     "declaration": true,
     "removeComments": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "#dbTypes/*": ["./src/dbTypes/*"],
-      "#routes/*": ["./src/routes/*"],
-      "#seedData/*": ["./knex/seedData/*"]
-    }
+    "baseUrl": "."
   }
 }

@@ -24,25 +24,17 @@
       "#components/*": [
         "./src/components/*"
       ],
-      "#contexts/*": [
-        "./src/contexts/*"
-      ],
       "#pages/*": [
         "./src/pages/*"
       ],
       "#public/*": [
         "./public/*"
       ],
-      "#queries/*": [
-        "./src/queries/*"
-      ],
-      "#relay/*": [
-        "./src/relay/*"
-      ],
       "#utils/*": [
         "./src/utils/*"
       ]
-    }
+    },
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",

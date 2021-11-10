@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* This value will be overridden once the Layout component renders. It's only here as a backup. */
-  --full-height: 100vh;
-  --full-width: 100vw;
+html,
+body,
+#__next {
+  height: 100%;
+}
 
+body {
   @apply text-white bg-black overflow-hidden;
 }
 

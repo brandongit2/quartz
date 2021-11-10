@@ -2,13 +2,12 @@ import {HttpException, UnauthorizedException, UseGuards} from "@nestjs/common"
 import {Args, Context, Mutation, Resolver} from "@nestjs/graphql"
 import bcrypt from "bcrypt"
 
+import {AuthGuard} from "./auth.guard"
+import {AuthService} from "./auth.service"
 import {FastifyExecutionContext} from "src/FastifyExecutionContext"
 import {CurrentUser} from "src/user/user.decorator"
 import {User} from "src/user/user.entity"
 import {UserService} from "src/user/user.service"
-
-import {AuthGuard} from "./auth.guard"
-import {AuthService} from "./auth.service"
 
 @Resolver()
 export class AuthResolver {
