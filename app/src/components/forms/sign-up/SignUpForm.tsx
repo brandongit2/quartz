@@ -1,5 +1,6 @@
-import {yupResolver} from "@hookform/resolvers/yup"
+import {yupResolver} from "@hookform/resolvers/yup/dist/yup"
 import clsx from "clsx"
+import React from "react"
 import {useForm} from "react-hook-form"
 
 import type {FC} from "react"

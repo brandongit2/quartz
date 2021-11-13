@@ -7363,9 +7363,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:5.2.1":
-  version: 5.2.1
-  resolution: "framer-motion@npm:5.2.1"
+"framer-motion@npm:5.3.0":
+  version: 5.3.0
+  resolution: "framer-motion@npm:5.3.0"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     framesync: 6.0.1
@@ -7379,7 +7379,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: e19e1eb063617965ad6783b62ae2437e69f6718244a5800c7c8cbe9d14b8c259bfd90edf33d34c02bcf37d5c4d03a41ef7f478f0ba16a17b57375d5dcc334379
+  checksum: 1ba539e21ab1bbb77b014b3a2d908ce67dde1467e34405b72f6cc1b9ab6e19b3b539953d5102aace1178acd4408d6c1caf299aeb7de035b12579bd2ad2562d0f
   languageName: node
   linkType: hard
 
@@ -11271,13 +11271,14 @@ __metadata:
     clsx: 1.1.1
     eslint-plugin-react: 7.27.0
     eslint-plugin-react-hooks: 4.3.0
-    framer-motion: 5.2.1
+    framer-motion: 5.3.0
     next: 12.0.3
     postcss: 8.3.11
     react: 17.0.2
     react-dom: 17.0.2
-    react-hook-form: 7.19.3
+    react-hook-form: 7.19.5
     slate: 0.70.0
+    slate-history: 0.66.0
     slate-react: 0.70.0
     tailwindcss: 2.2.19
     typescript: 4.4.4
@@ -11400,12 +11401,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:7.19.3":
-  version: 7.19.3
-  resolution: "react-hook-form@npm:7.19.3"
+"react-hook-form@npm:7.19.5":
+  version: 7.19.5
+  resolution: "react-hook-form@npm:7.19.5"
   peerDependencies:
     react: ^16.8.0 || ^17
-  checksum: c893e4d52b7a03a42c3999e3e6a93fe93e8accb7a65088f7c0b2724add1dec4b3a5299afa80a83d2c6ab604a17c90b34ac961a2148a58565a41d9dadde3664cc
+  checksum: 129bcb530187e76a013d8a44dc4557261f6833e5627153229db598a93b333f6735879842134b24e61ec95f5f41d81b067454a86193a5caeb41bb3961c3aa4fc5
   languageName: node
   linkType: hard
 
@@ -12245,6 +12246,17 @@ resolve@^2.0.0-next.3:
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
   checksum: 94a93fff615f25a999ad4b83c9d5e257a7280c90a32a7cb8b4a87996e4babf322e469c42b7f649fd5796edd8687652f3fb452a86dc97a816f01113183393f11c
+  languageName: node
+  linkType: hard
+
+"slate-history@npm:0.66.0":
+  version: 0.66.0
+  resolution: "slate-history@npm:0.66.0"
+  dependencies:
+    is-plain-object: ^5.0.0
+  peerDependencies:
+    slate: ">=0.65.3"
+  checksum: e83d4fbf5d4097a5b434df4846420e593598a9a3f90d3e0638f16915b1014bc8a7dc5cd87e3bc0a31a8ad5eae582a18f96bdc04f4b0b0a5a82cf05bd0377601e
   languageName: node
   linkType: hard
 

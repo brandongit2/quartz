@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     colors: {
       black: `#000000`,
+      grey: `#333333`,
       white: `#EEEEEE`,
+      yellow: `#FFE018`,
     },
     fontFamily: {
       sans: [`Gothic A1`, `sans-serif`],

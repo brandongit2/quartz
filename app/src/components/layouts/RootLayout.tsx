@@ -5,17 +5,15 @@ import type {FC} from "react"
 
 export type RootLayoutProps = {
   title: string
-} & React.DetailedHTMLProps<React.HTMLProps<HTMLDivElement>, HTMLDivElement>
+}
 
-const RootLayout: FC<RootLayoutProps> = ({children, title, ...props}) => {
+const RootLayout: FC<RootLayoutProps> = ({children, title}) => {
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="h-screen grid place-items-stretch">
-        <div {...props}>{children}</div>
-      </div>
+      <div className="h-full">{children}</div>
       <div id="modals" />
     </>
   )
