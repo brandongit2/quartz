@@ -3,7 +3,7 @@ import type {HistoryEditor} from "slate-history"
 import type {ReactEditor} from "slate-react"
 
 type CustomElement = {
-  type: `paragraph` | `math`
+  type: `heading1` | `heading2` | `heading3` | `paragraph` | `math`
   children: CustomText[]
 }
 type CustomText = {text: string}

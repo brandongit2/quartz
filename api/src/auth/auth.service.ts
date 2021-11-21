@@ -2,7 +2,7 @@ import {InjectRedis} from "@brandonnpm2/nestjs-redis"
 import {Injectable, UnauthorizedException} from "@nestjs/common"
 import bcrypt from "bcrypt"
 import {Redis} from "ioredis"
-import {v4} from "uuid"
+import {nanoid} from "nanoid"
 
 import {User} from "src/user/user.entity"
 import {UserService} from "src/user/user.service"
@@ -13,8 +13,9 @@ export class AuthService {
 
   async validateUserLocal(email: string, password: string): Promise<User> {
     const user = await this.userService.findOneByEmail(email)
+    if (!user) throw new UnauthorizedException()
 
-    if (user && user.passwordHash && bcrypt.compareSync(password, user.passwordHash)) {
+    if (user.passwordHash && bcrypt.compareSync(password, user.passwordHash)) {
       return {
         id: user.id,
         firstName: user.firstName,
@@ -27,10 +28,10 @@ export class AuthService {
   }
 
   async genSessionToken(userId: string, sessionId?: string): Promise<{sessionId: string; token: string}> {
-    const token = v4()
+    const token = nanoid()
     const encryptedToken = bcrypt.hashSync(token, 10)
 
-    if (!sessionId) sessionId = v4()
+    if (!sessionId) sessionId = nanoid()
 
     await Promise.all([
       this.redis.hset(`sess:${sessionId}`, `userId`, userId),

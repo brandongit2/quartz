@@ -34,6 +34,7 @@ module.exports = {
     "no-constant-condition": [2, {checkLoops: false}],
     "no-control-regex": 0,
     "no-empty": [1, {allowEmptyCatch: true}],
+    "no-fallthrough": 0,
     "no-unused-vars": [1, {ignoreRestSiblings: true}],
     quotes: [1, `backtick`],
   },

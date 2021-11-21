@@ -1,4 +1,4 @@
-import {HttpException, UnauthorizedException, UseGuards} from "@nestjs/common"
+import {ConflictException, UseGuards} from "@nestjs/common"
 import {Args, Context, Mutation, Resolver} from "@nestjs/graphql"
 import bcrypt from "bcrypt"
 
@@ -22,7 +22,7 @@ export class AuthResolver {
     @Context() context: FastifyExecutionContext,
   ): Promise<User> {
     const existingUser = await this.userService.findOneByEmail(email)
-    if (existingUser) throw new HttpException(`This email is already taken.`, 409)
+    if (existingUser) throw new ConflictException(`This email is already taken.`)
 
     const encryptedPassword = await bcrypt.hash(password, 10)
 
@@ -62,7 +62,6 @@ export class AuthResolver {
     @Context() context: FastifyExecutionContext,
   ): Promise<User> {
     const user = await this.authService.validateUserLocal(email, password)
-    if (!user) throw new UnauthorizedException()
 
     const expiryDate = new Date()
     expiryDate.setDate(expiryDate.getDate() + 30)

@@ -12,12 +12,9 @@ type Query {
   user: User!
 }
 
-"""The `UUID` scalar type represents a v4 UUID."""
-scalar UUID
-
 type User {
   email: String!
   firstName: String!
-  id: UUID!
+  id: String!
   lastName: String!
 }

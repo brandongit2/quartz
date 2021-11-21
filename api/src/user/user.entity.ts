@@ -1,10 +1,7 @@
-import {Field, ObjectType} from "@nestjs/graphql"
-
-import {UuidScalar} from "src/uuid.scalar"
+import {ObjectType} from "@nestjs/graphql"
 
 @ObjectType()
 export class User {
-  @Field(() => UuidScalar)
   id!: string
   firstName!: string
   lastName!: string

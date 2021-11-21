@@ -1,3 +1,5 @@
+import React from "react"
+
 import type {FC} from "react"
 
 import SignUpForm from "#components/forms/sign-up/SignUpForm"

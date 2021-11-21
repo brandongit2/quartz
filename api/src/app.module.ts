@@ -5,7 +5,6 @@ import {GraphQLModule} from "@nestjs/graphql"
 import IORedis from "ioredis"
 import path from "path"
 
-import {UuidScalar} from "./uuid.scalar"
 import {AuthModule} from "src/auth/auth.module"
 import {PrismaModule} from "src/prisma/prisma.module"
 import {UserModule} from "src/user/user.module"
@@ -39,6 +38,5 @@ import {UserModule} from "src/user/user.module"
     AuthModule,
     UserModule,
   ],
-  providers: [UuidScalar],
 })
 export class AppModule {}
