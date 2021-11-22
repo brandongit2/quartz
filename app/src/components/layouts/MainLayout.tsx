@@ -12,9 +12,9 @@ export type MainLayoutProps = {
 const MainLayout: FC<MainLayoutProps> = ({children, title}) => {
   return (
     <RootLayout title={title}>
-      <Navbar className="sticky top-0 left-0" />
-      <div className="min-h-screen grid bg-sepia gap-6 px-12 py-6" style={{gridTemplateRows: `max-content 1fr`}}>
-        <main>{children}</main>
+      <div className="grid h-full" style={{gridTemplateRows: `auto 1fr`}}>
+        <Navbar className="sticky top-0 left-0" />
+        <main className="mx-6 my-4">{children}</main>
       </div>
     </RootLayout>
   )

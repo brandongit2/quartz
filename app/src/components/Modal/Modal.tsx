@@ -1,3 +1,4 @@
+import {mauve} from "@radix-ui/colors"
 import {AnimatePresence, motion} from "framer-motion"
 import React from "react"
 import ReactDOM from "react-dom"
@@ -5,7 +6,6 @@ import ReactDOM from "react-dom"
 import type {FC} from "react"
 
 import CloseIcon from "#public/icons/close.svg"
-import {getTailwindConfig} from "#utils/getTailwindConfig"
 
 export type ModalProps = {
   visible: boolean
@@ -13,13 +13,14 @@ export type ModalProps = {
 }
 
 const Modal: FC<ModalProps> = ({children, visible, onClose}) => {
-  const {theme} = getTailwindConfig()
-
   try {
     document
   } catch {
     return null
   }
+
+  const target = document.getElementById(`modals`)
+  if (!target) return null
 
   return ReactDOM.createPortal(
     <AnimatePresence>
@@ -42,19 +43,14 @@ const Modal: FC<ModalProps> = ({children, visible, onClose}) => {
             }}
           >
             <button className="plain">
-              <CloseIcon
-                className="w-5 h-5 my-1"
-                style={{gridArea: `close`}}
-                fill={theme.colors.black}
-                onClick={onClose}
-              />
+              <CloseIcon className="w-5 h-5 my-1" style={{gridArea: `close`}} fill={mauve.mauve1} onClick={onClose} />
             </button>
             {children}
           </div>
         </motion.div>
       ) : null}
     </AnimatePresence>,
-    document.getElementById(`modals`)!,
+    target,
   )
 }
 

@@ -8,7 +8,7 @@ import MainLayout from "#components/layouts/MainLayout"
 const Doc: NextPage = () => {
   return (
     <MainLayout title="Document">
-      <div className="max-w-4xl w-full mx-auto rounded-lg bg-grey p-8">
+      <div className="max-w-4xl w-full mx-auto rounded-lg bg-mauve5 p-8 min-h-full">
         <Editor />
       </div>
     </MainLayout>

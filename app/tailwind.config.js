@@ -1,3 +1,5 @@
+const {crimsonDark, mauveDark} = require(`@radix-ui/colors`)
+
 module.exports = {
   purge: [`./src/**/*.{js,ts,jsx,tsx}`],
   mode: `jit`,
@@ -5,18 +7,11 @@ module.exports = {
   important: true,
   theme: {
     colors: {
-      black: `#000000`,
-      grey: `#333333`,
-      white: `#EEEEEE`,
-      yellow: `#FFE018`,
+      ...crimsonDark,
+      ...mauveDark,
     },
     fontFamily: {
       sans: [`Gothic A1`, `sans-serif`],
-    },
-    extend: {
-      spacing: {
-        128: `32rem`,
-      },
     },
   },
 }

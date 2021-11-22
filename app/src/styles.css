@@ -9,7 +9,7 @@ body,
 }
 
 body {
-  @apply text-white bg-black overflow-hidden;
+  @apply text-mauve12 bg-mauve1 overflow-hidden;
 }
 
 h1 {
@@ -22,7 +22,11 @@ h2 {
 
 input[type="text"],
 input[type="email"] {
-  @apply border-2 border-black px-4 py-2 outline-none;
+  @apply border-2 border-crimson7 px-4 py-2 outline-none;
+}
+
+button {
+  @apply outline-none;
 }
 
 @layer utilities {
@@ -30,8 +34,12 @@ input[type="email"] {
     @apply grid gap-y-4;
   }
 
-  .button {
-    @apply px-4 py-2 bg-black text-white rounded cursor-pointer;
+  .btn {
+    @apply px-3 py-2 border border-mauve12 border-opacity-0 hover:border-opacity-100 transition-colors text-mauve12 cursor-pointer;
+  }
+
+  .btn-sm {
+    @apply text-sm;
   }
 
   .center {
