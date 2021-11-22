@@ -1,3 +1,4 @@
+import type {css as cssImport} from "@emotion/react"
 import type {BaseEditor} from "slate"
 import type {HistoryEditor} from "slate-history"
 import type {ReactEditor} from "slate-react"
@@ -14,4 +15,8 @@ declare module "slate" {
     Element: CustomElement
     Text: CustomText
   }
+}
+
+declare module "twin.macro" {
+  const css: typeof cssImport
 }
