@@ -1,15 +1,20 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
-import clsx from "clsx"
 import React, {useCallback, useState} from "react"
 import {Editor, Transforms} from "slate"
-import tw, {css} from "twin.macro"
 
 import type {Side} from "@radix-ui/popper"
 import type {FC} from "react"
 import type {CustomTypes} from "slate"
 
+import {Heading1, Heading2, Heading3} from "#components/Editor/Element"
 import getParentBlockElement from "#components/Editor/getParentBlockElement"
 import TriangleIcon from "#public/icons/triangle.svg"
+
+const DropdownItem: FC = ({children}) => (
+  <DropdownMenu.Item className="hover:bg-mauve-light-5 transition-colors px-2 py-1 cursor-pointer text-sm">
+    {children}
+  </DropdownMenu.Item>
+)
 
 type ToolbarProps = {
   editor: CustomTypes[`Editor`]
@@ -48,44 +53,49 @@ const Toolbar: FC<ToolbarProps> = ({editor}) => {
   if (dropdownSide === `bottom` && !dropdownIsOpen) dropdownTriggerDirection = `down`
 
   return (
-    <div
-      className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-mauve12 text-mauve3 rounded-md p-4 flex gap-4"
-      style={{filter: `drop-shadow(0px 0px 20px #FFF5)`}}
-    >
+    <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-mauve-light-1 text-mauve-light-12 p-2 flex gap-2">
       <DropdownMenu.Root>
-        <DropdownMenu.Trigger className="px-2 py-1 border border-mauve3 flex gap-2 items-center" ref={triggerRef}>
+        <DropdownMenu.Trigger className="btn btn-inverted" ref={triggerRef}>
           Block style
           <TriangleIcon
-            className={clsx(`h-3 transition-transform`)}
+            className="h-2 transition-transform"
             style={{transform: dropdownTriggerDirection === `up` && `scaleY(-1)`}}
           />
         </DropdownMenu.Trigger>
 
         <DropdownMenu.Content
           align="start"
-          sideOffset={-1}
           forceMount
-          className="overflow-hidden"
+          style={{transform: `translateX(-0.5px)`}}
+          sideOffset={-1}
           css={css`
-            &[data-state="open"] > div {
-              ${tw`translate-y-0`}
+            &[data-state="open"] > div > div {
+              transform: translateY(0%);
             }
 
-            &[data-state="closed"] > div {
-              ${tw`translate-y-full`}
+            &[data-state="closed"] > div > div {
+              transform: translateY(100%);
             }
           `}
           ref={contentRef}
         >
-          <div className="p-4 bg-mauve12 text-mauve3 border border-mauve3 flex flex-col gap-2 transition-transform">
-            <DropdownMenu.Item>Header 1</DropdownMenu.Item>
-            <DropdownMenu.Item>Header 2</DropdownMenu.Item>
-            <DropdownMenu.Item>Header 3</DropdownMenu.Item>
+          <div className="overflow-hidden">
+            <div className="p-2 bg-mauve-light-1 text-mauve-light-12 border border-mauve-light-12 flex flex-col gap-1 transition-transform">
+              <DropdownItem>
+                <Heading1>Header 1</Heading1>
+              </DropdownItem>
+              <DropdownItem>
+                <Heading2>Header 2</Heading2>
+              </DropdownItem>
+              <DropdownItem>
+                <Heading3>Header 3</Heading3>
+              </DropdownItem>
+            </div>
           </div>
         </DropdownMenu.Content>
       </DropdownMenu.Root>
-      <button onMouseDown={(e) => e.preventDefault()} onClick={addMathBlock}>
-        add a math block
+      <button onMouseDown={(e) => e.preventDefault()} onClick={addMathBlock} className="btn btn-inverted">
+        Add a math block
       </button>
     </div>
   )

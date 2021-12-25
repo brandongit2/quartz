@@ -12,14 +12,12 @@ const Index: NextPage = () => {
     <RootLayout title="Notary: Light-speed notes.">
       <Navbar noLogo noHeight />
       <div className="h-full flex flex-col justify-center items-start px-16">
-        <QuartzLogo className="h-28" />
+        <QuartzLogo className="h-16" />
 
         <div className="mt-12 flex flex-col gap-4 items-start">
-          <p className="text-2xl bg-white text-black px-4 py-2 font-bold">
-            LaTeX-grade documents without the LaTeX-grade complexity.
-          </p>
+          <p className="text-2xl font-bold">LaTeX-grade documents without the LaTeX-grade complexity.</p>
           <Link href="/doc">
-            <a className="text-xl font-semibold bg-yellow text-black px-4 py-2">Create a document →</a>
+            <a className="text-xl font-semibold">Create a document →</a>
           </Link>
         </div>
       </div>

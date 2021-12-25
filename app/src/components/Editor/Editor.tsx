@@ -6,6 +6,7 @@ import {Editable, Slate, withReact} from "slate-react"
 import type {FC} from "react"
 import type {Descendant, CustomTypes} from "slate"
 
+import Toolbar from "#components/Editor/Toolbar"
 import Element from "./Element"
 import Leaf from "./Leaf"
 import type {CustomElement} from "src/types"
@@ -29,6 +30,7 @@ const Editor: FC = () => {
   return (
     <Slate value={value} onChange={setValue} editor={editor}>
       <Editable renderElement={renderElement} renderLeaf={renderLeaf} className="flex flex-col gap-2" />
+      <Toolbar editor={editor} />
     </Slate>
   )
 }

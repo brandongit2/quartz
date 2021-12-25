@@ -18,8 +18,14 @@ const Navbar: FC<NavbarProps> = ({className, noLogo = false, noHeight = false}) 
   const [showSignInModal, setShowSignInModal] = useState(false)
 
   return (
-    <div className={clsx(`w-full h-16 flex justify-between items-center px-6 py-4`, noHeight && `absolute`, className)}>
-      {noLogo ? <div /> : <QuartzLogo className="h-full" />}
+    <div
+      className={clsx(
+        `w-full h-20 flex justify-between items-center px-6 pt-4 pb-2`,
+        noHeight && `absolute`,
+        className,
+      )}
+    >
+      {noLogo ? <div /> : <QuartzLogo className="h-full py-2 pl-1" />}
       <div className="flex gap-4">
         <button className="btn btn-sm" onClick={() => setShowSignInModal(true)}>
           Sign in

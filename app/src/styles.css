@@ -9,7 +9,7 @@ body,
 }
 
 body {
-  @apply text-mauve12 bg-mauve1 overflow-hidden;
+  @apply text-mauve-12 bg-mauve-1 overflow-hidden;
 }
 
 h1 {
@@ -22,10 +22,10 @@ h2 {
 
 input[type="text"],
 input[type="email"] {
-  @apply border-2 border-crimson7 px-4 py-2 outline-none;
+  @apply border-2 border-crimson-7 px-4 py-2 outline-none;
 }
 
-button {
+* {
   @apply outline-none;
 }
 
@@ -35,11 +35,19 @@ button {
   }
 
   .btn {
-    @apply px-3 py-2 border border-mauve12 border-opacity-0 hover:border-opacity-100 transition-colors text-mauve12 cursor-pointer;
+    @apply px-3 py-2 border transition-colors cursor-pointer whitespace-nowrap flex gap-2 items-center text-sm font-semibold;
+
+    &[data-state="open"] {
+      @apply border-mauve-light-12;
+    }
   }
 
-  .btn-sm {
-    @apply text-sm;
+  .btn-inverted {
+    @apply text-mauve-light-12 border-mauve-light-6 hover:border-mauve-light-12 focus:border-mauve-light-12;
+  }
+
+  .btn:not(.btn-inverted) {
+    @apply text-mauve-12 border-mauve-4 hover:border-mauve-12;
   }
 
   .center {

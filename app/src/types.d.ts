@@ -1,13 +1,16 @@
-import type {css as cssImport} from "@emotion/react"
 import type {BaseEditor} from "slate"
 import type {HistoryEditor} from "slate-history"
 import type {ReactEditor} from "slate-react"
 
 type CustomElement = {
   type: `heading1` | `heading2` | `heading3` | `paragraph` | `math`
-  children: CustomText[]
+  children: Array<CustomText | CustomElement>
 }
-type CustomText = {text: string}
+
+type CustomText = {
+  mark?: `bold` | `italic` | `underline`
+  text: string
+}
 
 declare module "slate" {
   interface CustomTypes {
@@ -17,6 +20,7 @@ declare module "slate" {
   }
 }
 
-declare module "twin.macro" {
-  const css: typeof cssImport
+declare module "*.svg" {
+  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>
+  export default ReactComponent
 }
